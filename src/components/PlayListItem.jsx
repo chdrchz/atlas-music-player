@@ -1,10 +1,10 @@
-export default function PlayListItem() {
+export default function PlayListItem({ song, artist, duration }) {
   return (
     <div>
-      <p>Electric Fever</p>
+      <p>{song}</p>
       <div className="flex items-center justify-between">
-        <p className="text-gray-500">Neon Jungle</p>
-        <p className="text-gray-500">8:41</p>
+        <p className="text-gray-500">{artist}</p>
+        <p className="text-gray-500">{duration}</p>
       </div>
     </div>
   );
