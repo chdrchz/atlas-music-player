@@ -2,6 +2,7 @@ import Footer from "./Footer";
 import MusicPlayer from "./MusicPlayer";
 import CoverArt from "./CoverArt";
 import SongTitle from "./SongTitle";
+import PlayControls from "./PlayControls";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <MusicPlayer />
       <CoverArt />
       <SongTitle />
+      <PlayControls />
       <Footer />
     </div>
   );
