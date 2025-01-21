@@ -1,5 +1,8 @@
 export default function SongTitle() {
-    return (
-        <><h1>Tidal Drift</h1><h2>Echoes of the Sea</h2></>
-    )
+  return (
+    <div>
+      <p>Tidal Drift</p>
+      <p className="text-gray-500">Echoes of the Sea</p>
+    </div>
+  );
 }

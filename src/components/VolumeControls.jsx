@@ -5,7 +5,7 @@ export default function VolumeControls() {
   const [value, setValue] = useState(50);
 
   return (
-    <>
+    <div className="flex items-center gap-2">
       <AudioLines />
       <input
         type="range"
@@ -18,6 +18,6 @@ export default function VolumeControls() {
           background: `linear-gradient(to right, rgb(75, 85, 99) ${value}%, rgb(229, 231, 235) ${value}%)`,
         }}
       />
-    </>
+    </div>
   );
 }
