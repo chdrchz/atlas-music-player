@@ -3,7 +3,7 @@ import Playlist from "./Playlist";
 
 export default function MusicPlayer() {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col md:flex-row">
       <CurrentlyPlaying />
       <Playlist />
     </div>

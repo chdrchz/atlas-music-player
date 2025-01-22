@@ -55,18 +55,19 @@ const playlistSongs = [
 
 export default function Playlist() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="md:w-1/3">
       <p className="text-2xl">Playlist</p>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col justify-between">
         {playlistSongs.map((track, index) => (
-          <PlayListItem
-            key={index}
-            song={track.song}
-            artist={track.artist}
-            duration={track.duration}
-          />
+          <div key={index} className="flex flex-col">
+            <span>{track.song}</span>
+            <div className="flex flex-row justify-between">
+              <span>{track.artist}</span>
+              <span>{track.duration}</span>
+            </div>
+          </div>
         ))}
       </div>
     </div>
   );
-}
+ }

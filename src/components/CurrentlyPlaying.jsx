@@ -5,7 +5,7 @@ import VolumeControls from "../components/VolumeControls";
 
 export default function CurrentlyPlaying() {
     return (
-        <div className="flex flex-col gap-6">
+        <div className="m:w-1/3">
             <CoverArt />
             <SongTitle />
             <PlayControls />
