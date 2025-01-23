@@ -1,5 +1,3 @@
-import PlayListItem from "./PlayListItem";
-
 const playlistSongs = [
   {
     song: "Painted In Blue",
@@ -55,9 +53,9 @@ const playlistSongs = [
 
 export default function Playlist() {
   return (
-    <div className="md:w-1/3">
+    <div className="flex w-full flex-1 flex-col md:w-1/2">
       <p className="text-2xl">Playlist</p>
-      <div className="flex flex-col justify-between">
+      <div className="flex flex-1 flex-col gap-4 overflow-y-auto">
         {playlistSongs.map((track, index) => (
           <div key={index} className="flex flex-col">
             <span>{track.song}</span>
@@ -70,4 +68,4 @@ export default function Playlist() {
       </div>
     </div>
   );
- }
+}
