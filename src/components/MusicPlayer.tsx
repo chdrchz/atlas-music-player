@@ -1,4 +1,4 @@
-import CurrentlyPlaying from "../components/CurrentlyPlaying";
+import CurrentlyPlaying from "./CurrentlyPlaying";
 import Playlist from "./Playlist";
 
 export default function MusicPlayer() {

@@ -1,7 +1,7 @@
-import CoverArt from "../components/CoverArt";
-import SongTitle from "../components/SongTitle";
-import PlayControls from "../components/PlayControls";
-import VolumeControls from "../components/VolumeControls";
+import CoverArt from "./CoverArt";
+import SongTitle from "./SongTitle";
+import PlayControls from "./PlayControls";
+import VolumeControls from "./VolumeControls";
 
 export default function CurrentlyPlaying() {
   return (

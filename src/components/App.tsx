@@ -1,5 +1,5 @@
-import MusicPlayer from "../components/MusicPlayer";
-import Footer from "../components/Footer";
+import MusicPlayer from "./MusicPlayer";
+import Footer from "./Footer";
 
 function App() {
   return (
