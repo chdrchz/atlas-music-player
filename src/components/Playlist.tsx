@@ -1,3 +1,5 @@
+import PlayListItem from "./PlayListItem.tsx";
+
 const playlistSongs = [
   {
     song: "Painted In Blue",
@@ -57,13 +59,12 @@ export default function Playlist() {
       <p className="text-2xl">Playlist</p>
       <div className="flex flex-1 flex-col gap-4 overflow-y-auto">
         {playlistSongs.map((track, index) => (
-          <div key={index} className="flex flex-col">
-            <span>{track.song}</span>
-            <div className="flex flex-row justify-between">
-              <span>{track.artist}</span>
-              <span>{track.duration}</span>
-            </div>
-          </div>
+          <PlayListItem
+            key={index}
+            song={track.song}
+            artist={track.artist}
+            duration={track.duration}
+          />
         ))}
       </div>
     </div>
