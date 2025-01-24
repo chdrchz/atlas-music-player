@@ -1,7 +1,10 @@
-import Image from '../assets/placeholder.svg';
+interface CoverArtProps {
+    cover: string;
+  }
 
-export default function CoverArt() {
+export default function CoverArt({ cover }: CoverArtProps) {
+    console.log('Cover Art URL:', cover);
     return (
-        <img src={Image} alt="svg" />
-    )                                                                               
+        <img src={cover} alt="Cover Art" className=""/>
+    )
 }

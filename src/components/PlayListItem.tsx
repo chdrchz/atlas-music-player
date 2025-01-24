@@ -2,18 +2,24 @@ interface PlaylistItem {
   title: string;
   artist: string;
   duration: number;
+  isSelected: boolean;
+  onClick: () => void;
 }
 
 export default function PlayListItem({
   title,
   artist,
   duration,
+  isSelected,
+  onClick,
 }: PlaylistItem) {
-
   return (
-    <div>
+    <div
+      className={`flex flex-col ${isSelected ? "bg-gray-300" : ""}`}
+      onClick={onClick}
+    >
       <p>{title}</p>
-      <div className="flex flex-row justify-between">
+      <div className="flex justify-between">
         <p className="text-gray-500">{artist}</p>
         <p className="text-gray-500">{formatDuration(duration)}</p>
       </div>
@@ -24,5 +30,5 @@ export default function PlayListItem({
 function formatDuration(seconds: number): string {
   const minutes = Math.floor(seconds / 60);
   const remainingSeconds = seconds % 60;
-  return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+  return `${minutes}:${remainingSeconds.toString().padStart(2, "0")}`;
 }

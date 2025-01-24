@@ -1,32 +1,26 @@
 import PlayListItem from "./PlayListItem.tsx";
 import { UseApi } from "./UseApi.tsx";
-
-interface Track {
-  id: string | number;
-  title: string;
-  artist: string;
-  duration: number;
-}
+import { useCurrentSong } from "./CurrentSongContext";
 
 export default function Playlist() {
-  try {
-    const data = UseApi();
-    console.log(data);
-    return (
-      <div className="flex w-full flex-1 flex-col md:w-1/2">
-        <p className="text-2xl mb-6">Playlist</p>
-        <div className="flex flex-1 flex-col gap-4 overflow-y-auto">
-          {data?.map((track: Track) => (
-            <PlayListItem
-              title={track.title}
-              artist={track.artist}
-              duration={track.duration}
-            />
-          )) ?? []}
-        </div>
+  const { currentSong, setCurrentSong } = useCurrentSong();
+  const data = UseApi();
+
+  return (
+    <div className="flex w-full flex-1 flex-col md:w-1/2">
+      <p className="mb-6 text-2xl">Playlist</p>
+      <div className="flex flex-1 flex-col gap-4 overflow-y-auto">
+        {data?.map((track) => (
+          <PlayListItem
+            key={track.id}
+            title={track.title}
+            artist={track.artist}
+            duration={track.duration}
+            isSelected={currentSong?.id === track.id}
+            onClick={() => setCurrentSong(track)}
+          />
+        ))}
       </div>
-    );
-  } catch (error) {
-    console.error("Error fetching data");
-  }
+    </div>
+  );
 }

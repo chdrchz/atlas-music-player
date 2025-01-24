@@ -7,14 +7,13 @@ import { useCurrentSong } from './CurrentSongContext';
 
 export default function CurrentlyPlaying() {
   const { currentSong } = useCurrentSong();
-
   if (!currentSong) {
     return <p>No song is currently playing.</p>;
   }
 
   return (
     <div className="flex w-full flex-col gap-4 md:w-1/2">
-      <CoverArt />
+      <CoverArt cover={currentSong.cover}/>
       <SongTitle song={currentSong}/>
       <PlayControls />
       <VolumeControls />
