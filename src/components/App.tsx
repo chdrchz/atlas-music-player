@@ -3,9 +3,13 @@ import Footer from "./Footer.tsx";
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center sm:h-full md:h-screen">
-      <MusicPlayer />
-      <Footer />
+    <div className="flex sm:h-full md:h-screen flex-col items-center justify-center">
+      <div>
+        <MusicPlayer />
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
