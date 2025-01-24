@@ -3,7 +3,7 @@ import Footer from "./Footer.tsx";
 
 function App() {
   return (
-    <div className="flex h-screen flex-col items-center justify-center">
+    <div className="flex sm:h-full md:h-screen flex-col items-center justify-center">
       <div>
         <MusicPlayer />
       </div>
