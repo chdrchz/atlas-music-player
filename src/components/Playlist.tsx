@@ -13,7 +13,7 @@ export default function Playlist() {
 
   return (
     <div className="flex w-full flex-1 flex-col md:w-1/2">
-      <p className="text-2xl">Playlist</p>
+      <p className="text-2xl mb-6">Playlist</p>
       <div className="flex flex-1 flex-col gap-4 overflow-y-auto">
         {data?.map((track: Track) => (
           <PlayListItem
