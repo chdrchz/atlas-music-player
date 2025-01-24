@@ -1,7 +1,7 @@
-import CoverArt from "./CoverArt";
-import SongTitle from "./SongTitle";
-import PlayControls from "./PlayControls";
-import VolumeControls from "./VolumeControls";
+import CoverArt from "./CoverArt.tsx";
+import SongTitle from "./SongTitle.tsx";
+import PlayControls from "./PlayControls.tsx";
+import VolumeControls from "./VolumeControls.tsx";
 
 export default function CurrentlyPlaying() {
   return (

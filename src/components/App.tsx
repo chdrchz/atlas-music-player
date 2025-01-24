@@ -1,5 +1,5 @@
-import MusicPlayer from "./MusicPlayer";
-import Footer from "./Footer";
+import MusicPlayer from "./MusicPlayer.tsx";
+import Footer from "./Footer.tsx";
 
 function App() {
   return (
