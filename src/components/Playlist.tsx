@@ -18,7 +18,6 @@ export default function Playlist() {
         <div className="flex flex-1 flex-col gap-4 overflow-y-auto">
           {data?.map((track: Track) => (
             <PlayListItem
-              key={track.id}
               title={track.title}
               artist={track.artist}
               duration={track.duration}
