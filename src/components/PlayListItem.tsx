@@ -18,10 +18,10 @@ export default function PlayListItem({
       className={`flex flex-col w-full rounded-lg ${isSelected ? "bg-gray-300" : ""}`}
       onClick={onClick}
     >
-      <p className="mr-2 ml-2">{title}</p>
+      <p className="mr-2 ml-2 font-bold text-[#FCEFF9]">{title}</p>
       <div className="flex justify-between w-full">
-        <p className="mr-2 ml-2 text-gray-500">{artist}</p>
-        <p className="mr-2 ml-2 text-gray-500">{formatDuration(duration)}</p>
+        <p className="mr-2 ml-2 text-[#FCEFF9]">{artist}</p>
+        <p className="mr-2 ml-2 text-[#FCEFF9]">{formatDuration(duration)}</p>
       </div>
     </div>
   );
