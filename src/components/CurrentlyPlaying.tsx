@@ -1,5 +1,6 @@
 import CoverArt from "./CoverArt.tsx";
 import SongTitle from "./SongTitle.tsx";
+import AudioPlayer from "./AudioPlayer.tsx";
 import PlayControls from "./PlayControls.tsx";
 import VolumeControls from "./VolumeControls.tsx";
 
@@ -20,6 +21,7 @@ export default function CurrentlyPlaying() {
       <SongTitle song={currentSong} />
       <PlayControls />
       <VolumeControls />
+      <AudioPlayer song={currentSong} playing={false} volume={50} speed={1.0}/>
     </div>
   );
 }
