@@ -1,12 +1,5 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
-
-interface Track {
-  id: string | number;
-  title: string;
-  artist: string;
-  duration: number;
-  cover: string
-}
+import { Track } from "./UseApi.tsx";
 
 const CurrentSongContext = createContext<{
   currentSong: Track | null;

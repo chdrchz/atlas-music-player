@@ -6,6 +6,7 @@ export interface Track {
   artist: string;
   duration: number;
   cover: string;
+  song: string;
 }
 
 export const useApi = () => {
@@ -21,7 +22,8 @@ export const useApi = () => {
           `http://127.0.0.1:5173/api/v1/songs/${track.id}`,
         );
         const songData = await response.json();
-        return { ...track, cover: songData.cover };
+        console.log(songData);
+        return { ...track, cover: songData.cover, song: songData.song };
       }),
     );
 

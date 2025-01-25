@@ -5,6 +5,7 @@ import { useCurrentSong } from "./CurrentSongContext";
 export default function Playlist() {
   const { currentSong, setCurrentSong } = useCurrentSong();
   const data = useApi();
+  console.log("What is the data:", data);
 
   return (
     <div className="flex w-full flex-1 flex-col md:w-1/2">
