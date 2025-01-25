@@ -15,11 +15,11 @@ export default function PlayListItem({
 }: PlaylistItem) {
   return (
     <div
-      className={`flex flex-col ${isSelected ? "bg-gray-300" : ""}`}
+      className={`flex flex-col w-full ${isSelected ? "bg-gray-300" : ""}`}
       onClick={onClick}
     >
       <p>{title}</p>
-      <div className="flex justify-between">
+      <div className="flex justify-between w-full">
         <p className="text-gray-500">{artist}</p>
         <p className="text-gray-500">{formatDuration(duration)}</p>
       </div>

@@ -6,12 +6,12 @@ import { CurrentSongProvider } from './CurrentSongContext';
 function App() {
   return (
     <div className="flex sm:h-full md:h-screen flex-col items-center justify-center">
-      <div>
+      <div className="w-full">
       <CurrentSongProvider>
         <MusicPlayer />
       </CurrentSongProvider>
       </div>
-      <div>
+      <div className="w-full">
         <Footer />
       </div>
     </div>
