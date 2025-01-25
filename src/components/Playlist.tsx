@@ -9,7 +9,7 @@ export default function Playlist() {
   return (
     <div className="flex w-full flex-1 flex-col md:w-1/2">
       <p className="mb-6 text-2xl">Playlist</p>
-      <div className="flex flex-1 flex-col gap-4 overflow-y-auto">
+      <div className="flex flex-1 flex-col gap-4">
         {data?.map((track) => (
           <PlayListItem
             key={track.id}
