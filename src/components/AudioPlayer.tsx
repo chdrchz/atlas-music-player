@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import SongTitle from "./SongTitle";
 
 interface AudioProps {
   playing: boolean;
