@@ -24,16 +24,13 @@ export default function AudioPlayer(props: AudioProps) {
   }, [props.volume]);
 
   useEffect(() => {
-      if (!ref.current) return null;
-      ref.current.playbackRate = props.speed;
+    if (!ref.current) return;
+    ref.current.playbackRate = props.speed;
   }, [props.speed]);
 
   return (
     <audio ref={ref}>
-      <source
-        src={props.song}
-        type="audio/mpeg"
-      />
+      <source src={props.song} type="audio/mpeg" />
     </audio>
   );
 }
