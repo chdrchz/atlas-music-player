@@ -11,12 +11,13 @@ export default function AudioPlayer(props: AudioProps) {
   const ref = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
+    if (!ref.current) return;
+    ref.current.src = props.song;
+    ref.current.load();
     if (props.playing) {
-      ref.current?.play();
-    } else {
-      ref.current?.pause();
+      ref.current.play();
     }
-  }, [props.playing]);
+  }, [props.song, props.playing]);
 
   useEffect(() => {
     if (!ref.current) return;
