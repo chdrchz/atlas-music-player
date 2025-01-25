@@ -15,13 +15,17 @@ export default function PlayListItem({
 }: PlaylistItem) {
   return (
     <div
-      className={`flex flex-col w-full rounded-lg ${isSelected ? "bg-gray-300" : ""}`}
+      className={`flex w-full flex-col rounded-lg cursor-pointer${
+        isSelected
+          ? "bg-[#8EE3EF] bg-opacity-20 shadow-lg backdrop-blur-md backdrop-brightness-125 drop-shadow-md cursor-pointer"
+          : ""
+      }`}
       onClick={onClick}
     >
-      <p className="mr-2 ml-2 font-bold text-[#FCEFF9]">{title}</p>
-      <div className="flex justify-between w-full">
-        <p className="mr-2 ml-2 text-[#FCEFF9]">{artist}</p>
-        <p className="mr-2 ml-2 text-[#FCEFF9]">{formatDuration(duration)}</p>
+      <p className="ml-2 mr-2 font-bold text-[#FCEFF9]">{title}</p>
+      <div className="flex w-full justify-between">
+        <p className="ml-2 mr-2 text-[#FCEFF9]">{artist}</p>
+        <p className="ml-2 mr-2 text-[#FCEFF9]">{formatDuration(duration)}</p>
       </div>
     </div>
   );
