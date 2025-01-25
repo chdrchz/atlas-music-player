@@ -1,10 +1,10 @@
 import PlayListItem from "./PlayListItem.tsx";
-import { UseApi } from "./UseApi.tsx";
+import { useApi } from "./UseApi.tsx";
 import { useCurrentSong } from "./CurrentSongContext";
 
 export default function Playlist() {
   const { currentSong, setCurrentSong } = useCurrentSong();
-  const data = UseApi();
+  const data = useApi();
 
   return (
     <div className="flex w-full flex-1 flex-col md:w-1/2">

@@ -8,7 +8,7 @@ export interface Track {
   cover: string;
 }
 
-export const UseApi = () => {
+export const useApi = () => {
   const [playListData, setPlaylistData] = useState<Track[]>([]);
 
   const fetchPlaylistData = async () => {
