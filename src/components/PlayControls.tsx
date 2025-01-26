@@ -49,7 +49,7 @@ export default function PlayControls({
   };
 
   return (
-    <div className="font-comfortaa ml-3 mr-3 flex items-center justify-between">
+    <div className="font-comfortaa flex items-center justify-between p-6 rounded-lg bg-[#2d3447] drop-shadow-md">
       <button
         onClick={() => onSpeedChange?.(speed === 2 ? 0.5 : speed + 0.5)}
         className="flex w-7 justify-center rounded-md text-[#8EE3EF] hover:outline hover:outline-2 hover:outline-offset-8 hover:outline-[#8EE3EF]"

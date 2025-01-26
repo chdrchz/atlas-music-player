@@ -35,9 +35,11 @@ export default function CurrentlyPlaying() {
   }
 
   return (
-    <div className="flex w-full flex-col justify-between gap-4 rounded-lg bg-[#2d3547] p-6 drop-shadow-md md:w-1/2">
-      <CoverArt cover={currentSong.cover} />
-      <SongTitle song={currentSong} />
+    <div className="flex w-full flex-col justify-start gap-4 md:w-1/2">
+      <div className="flex flex-col gap-6 p-6 rounded-lg bg-[#2d3447] drop-shadow-md">
+        <CoverArt cover={currentSong.cover} />
+        <SongTitle song={currentSong} />
+      </div>
       <PlayControls
         isPlaying={isPlaying}
         onPlayPause={() => setIsPlaying(!isPlaying)}
