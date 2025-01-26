@@ -8,29 +8,25 @@ interface AudioProps {
 }
 
 export default function AudioPlayer(props: AudioProps) {
-  const ref = useRef<HTMLAudioElement>(null);
+  const ref = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     if (!ref.current) return;
     ref.current.src = props.song;
     ref.current.load();
+    ref.current.playbackRate = props.speed;
     if (props.playing) {
       ref.current.play();
     }
-  }, [props.song, props.playing]);
+  }, [props.song, props.playing, props.speed]);
 
   useEffect(() => {
     if (!ref.current) return;
     ref.current.volume = props.volume / 100;
   }, [props.volume]);
 
-  useEffect(() => {
-    if (!ref.current) return;
-    ref.current.playbackRate = props.speed;
-  }, [props.speed]);
-
   return (
-    <audio ref={ref}>
+    <audio ref={ref} preload="auto">
       <source src={props.song} type="audio/mpeg" />
     </audio>
   );

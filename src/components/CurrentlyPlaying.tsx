@@ -7,18 +7,28 @@ import PlayControls from "./PlayControls.tsx";
 import VolumeControls from "./VolumeControls.tsx";
 
 import { useCurrentSong } from "./CurrentSongContext";
-import { useApi } from "./UseApi.tsx";
+import { Track, useApi } from "./UseApi.tsx";
 
 export default function CurrentlyPlaying() {
   const { currentSong, setCurrentSong } = useCurrentSong();
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(50);
   const [speed, setSpeed] = useState<0.5 | 1.0 | 2.0>(1.0);
+  const [isShuffled, setIsShuffled] = useState(false);
+  const [shuffledPlaylist, setShuffledPlaylist] = useState<Track[]>([]);
   const data = useApi();
 
   useEffect(() => {
-    setIsPlaying(false);
-  }, [currentSong?.song]);
+    if (!currentSong) return;
+
+    if (isShuffled) {
+      const shuffled = data.filter((track) => track.song !== currentSong.song);
+      shuffled.sort(() => Math.random() - 0.5);
+      setShuffledPlaylist([currentSong, ...shuffled]);
+    } else {
+      setShuffledPlaylist(data);
+    }
+  }, [isShuffled, data, currentSong]);
 
   if (!currentSong) {
     return <p>No song is currently playing.</p>;
@@ -35,7 +45,9 @@ export default function CurrentlyPlaying() {
         currentSong={currentSong.song}
         setCurrentSong={setCurrentSong}
         onSpeedChange={(newSpeed) => setSpeed(newSpeed as 0.5 | 1.0 | 2.0)}
-        playlist={data}
+        playlist={isShuffled ? shuffledPlaylist : data}
+        onShuffle={() => setIsShuffled((prev) => !prev)}
+        isShuffled={isShuffled}
       />
       <VolumeControls volume={volume} onVolumeChange={setVolume} />
       <AudioPlayer

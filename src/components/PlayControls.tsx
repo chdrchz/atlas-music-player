@@ -7,6 +7,7 @@ interface PlayControlsProps {
   onNext?: () => void;
   onPrevious?: () => void;
   onShuffle?: () => void;
+  isShuffled: boolean;
   speed: 0.5 | 1.0 | 2.0;
   onSpeedChange?: (speed: number) => void;
   currentSong: string;
@@ -18,6 +19,7 @@ export default function PlayControls({
   isPlaying,
   onPlayPause,
   onShuffle,
+  isShuffled,
   speed = 1,
   onSpeedChange,
   currentSong,
@@ -73,7 +75,9 @@ export default function PlayControls({
       </button>
       <button
         onClick={onShuffle}
-        className="flex w-7 justify-center rounded-md text-[#8EE3EF] hover:outline hover:outline-2 hover:outline-offset-8 hover:outline-[#8EE3EF]"
+        className={`flex w-7 justify-center rounded-md hover:outline hover:outline-2 hover:outline-offset-8 hover:outline-[#8EE3EF] ${
+          isShuffled ? "text-[#8EE3EF]" : "text-gray-400"
+        }`}
       >
         <Shuffle />
       </button>
