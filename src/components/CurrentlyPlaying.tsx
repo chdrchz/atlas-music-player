@@ -7,12 +7,14 @@ import PlayControls from "./PlayControls.tsx";
 import VolumeControls from "./VolumeControls.tsx";
 
 import { useCurrentSong } from "./CurrentSongContext";
+import { useApi } from "./UseApi.tsx";
 
 export default function CurrentlyPlaying() {
-  const { currentSong } = useCurrentSong();
+  const { currentSong, setCurrentSong } = useCurrentSong();
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(50);
   const [speed, setSpeed] = useState<0.5 | 1.0 | 2.0>(1.0);
+  const data = useApi();
 
   useEffect(() => {
     setIsPlaying(false);
@@ -30,7 +32,10 @@ export default function CurrentlyPlaying() {
         isPlaying={isPlaying}
         onPlayPause={() => setIsPlaying(!isPlaying)}
         speed={speed}
+        currentSong={currentSong.song}
+        setCurrentSong={setCurrentSong}
         onSpeedChange={(newSpeed) => setSpeed(newSpeed as 0.5 | 1.0 | 2.0)}
+        playlist={data}
       />
       <VolumeControls volume={volume} onVolumeChange={setVolume} />
       <AudioPlayer

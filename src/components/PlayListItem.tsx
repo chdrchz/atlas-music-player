@@ -17,7 +17,7 @@ export default function PlayListItem({
     <div
       className={`flex w-full flex-col rounded-lg cursor-pointer${
         isSelected
-          ? "bg-[#8EE3EF] bg-opacity-10 shadow-lg backdrop-blur-md backdrop-brightness-125 drop-shadow-md cursor-pointer"
+          ? "bg-[#8EE3EF] shadow-lg backdrop-brightness-125 cursor-pointer"
           : ""
       }`}
       onClick={onClick}
