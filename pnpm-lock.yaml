@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/comfortaa':
+        specifier: 5.1.1
+        version: 5.1.1
+      '@fontsource/montserrat':
+        specifier: 5.1.1
+        version: 5.1.1
       lucide-react:
         specifier: 0.473.0
         version: 0.473.0(react@19.0.0)
@@ -339,6 +345,12 @@ packages:
   '@eslint/plugin-kit@0.2.5':
     resolution: {integrity: sha512-lB05FkqEdUg2AA0xEbUz0SnkXT1LcCTa438W4IWTUh4hdOnVbQyOJ81OrDXsJk/LSiJHubgGEFoR5EHq1NsH1A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fontsource/comfortaa@5.1.1':
+    resolution: {integrity: sha512-kRmvNCcGPMeuQYs7Wesd79CYAD1WxelQi8QhHSgaNDCm9T5Fo+J1CDdZ4dw1qN0GhEOX+W6vr3NLmdw68/WRlw==}
+
+  '@fontsource/montserrat@5.1.1':
+    resolution: {integrity: sha512-myTQCo0XWf5AXc3Pm5GFFTstueYTacE+gpL3G8Vf5ELpr/rBfW+zr7dKLPYXlq2r21HHwfyw6yueKWccWUtKBA==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1647,6 +1659,10 @@ snapshots:
     dependencies:
       '@eslint/core': 0.10.0
       levn: 0.4.1
+
+  '@fontsource/comfortaa@5.1.1': {}
+
+  '@fontsource/montserrat@5.1.1': {}
 
   '@humanfs/core@0.19.1': {}
 

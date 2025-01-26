@@ -1,5 +1,6 @@
 import { Play, Pause, FastForward, Rewind, Shuffle } from "lucide-react";
 import { Track } from "./UseApi";
+import '@fontsource/comfortaa';
 
 interface PlayControlsProps {
   isPlaying: boolean;
@@ -48,7 +49,7 @@ export default function PlayControls({
   };
 
   return (
-    <div className="ml-3 mr-3 flex items-center justify-between">
+    <div className="font-comfortaa ml-3 mr-3 flex items-center justify-between">
       <button
         onClick={() => onSpeedChange?.(speed === 2 ? 0.5 : speed + 0.5)}
         className="flex w-7 justify-center rounded-md text-[#8EE3EF] hover:outline hover:outline-2 hover:outline-offset-8 hover:outline-[#8EE3EF]"

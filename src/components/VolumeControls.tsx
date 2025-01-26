@@ -18,7 +18,7 @@ export default function VolumeControls({
         max="100"
         value={volume}
         onChange={(e) => onVolumeChange(parseInt(e.target.value))}
-        className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-[#FCEFF9] accent-gray-600"
+        className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-[#FCEFF9] accent-[#8EE3EF]"
         style={{
           background: `linear-gradient(to right, rgb(229, 231, 235) ${volume}%, rgb(75, 85, 99) ${volume}%)`,
         }}

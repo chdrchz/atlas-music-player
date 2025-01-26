@@ -1,3 +1,6 @@
+import "@fontsource/montserrat";
+import "@fontsource/comfortaa";
+
 interface PlaylistItem {
   title: string;
   artist: string;
@@ -15,17 +18,19 @@ export default function PlayListItem({
 }: PlaylistItem) {
   return (
     <div
-      className={`flex w-full flex-col rounded-lg cursor-pointer${
+      className={`p-1 flex w-full cursor-pointer flex-col rounded-lg ${
         isSelected
-          ? "bg-[#8EE3EF] shadow-lg backdrop-brightness-125 cursor-pointer"
+          ? "cursor-pointer shadow-lg backdrop-brightness-125"
           : ""
       }`}
       onClick={onClick}
     >
-      <p className="ml-2 mr-2 font-bold text-[#FCEFF9]">{title}</p>
+      <p className="font-comfortaa ml-2 mr-2 font-bold text-[#FCEFF9]">{title}</p>
       <div className="flex w-full justify-between">
-        <p className="ml-2 mr-2 text-[#FCEFF9]">{artist}</p>
-        <p className="ml-2 mr-2 text-[#FCEFF9]">{formatDuration(duration)}</p>
+        <p className="font-montserrat ml-2 mr-2 text-[#FCEFF9]">{artist}</p>
+        <p className="font-montserrat ml-2 mr-2 text-[#FCEFF9]">
+          {formatDuration(duration)}
+        </p>
       </div>
     </div>
   );
