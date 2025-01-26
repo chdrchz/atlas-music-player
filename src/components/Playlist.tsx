@@ -11,10 +11,10 @@ export default function Playlist() {
 
   return (
     <div className="flex flex-1 flex-col gap-4">
-      <p className="font-comfortaa w-full rounded-lg bg-[#2d3447] pl-6 pr-6 pt-4 pb-4 text-3xl font-bold text-[#FCEFF9] drop-shadow-md">
+      <p className="font-comfortaa w-full pl-6 pr-6 pt-4 pb-4 text-3xl font-bold text-orange-10 rounded-lg bg-orange-2 drop-shadow-md shadow-lg">
         Playlist
       </p>
-      <div className="flex flex-1 flex-col justify-between gap-2 rounded-lg bg-[#2d3547] p-4 drop-shadow-md">
+      <div className="flex flex-1 flex-col justify-between gap-2 rounded-lg p-4 bg-orange-2 drop-shadow-md shadow-lg">
         {data?.map((track) => (
           <PlayListItem
             key={track.id}

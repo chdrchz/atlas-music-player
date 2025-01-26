@@ -49,35 +49,35 @@ export default function PlayControls({
   };
 
   return (
-    <div className="font-comfortaa flex items-center justify-between p-6 rounded-lg bg-[#2d3447] drop-shadow-md">
+    <div className="font-comfortaa flex items-center justify-between p-6">
       <button
         onClick={() => onSpeedChange?.(speed === 2 ? 0.5 : speed + 0.5)}
-        className="flex w-7 justify-center rounded-md text-[#8EE3EF] hover:outline hover:outline-2 hover:outline-offset-8 hover:outline-[#8EE3EF]"
+        className="text-orange-10 flex w-7 justify-center rounded-md font-bold hover:outline hover:outline-2 hover:outline-offset-8 hover:outline-orange-5"
       >
         {speed}x
       </button>
       <button
         onClick={onPrevious}
-        className="flex w-7 justify-center rounded-md text-[#8EE3EF] hover:outline hover:outline-2 hover:outline-offset-8 hover:outline-[#8EE3EF]"
+        className="text-orange-10 flex w-7 justify-center rounded-md text-accent-green hover:outline hover:outline-2 hover:outline-offset-8 hover:outline-orange-5"
       >
         <Rewind />
       </button>
       <button
         onClick={onPlayPause}
-        className="flex w-7 justify-center rounded-md text-[#8EE3EF] hover:outline hover:outline-2 hover:outline-offset-8 hover:outline-[#8EE3EF]"
+        className="text-orange-10 flex w-7 justify-center rounded-md text-accent-green hover:outline hover:outline-2 hover:outline-offset-8 hover:outline-orange-5"
       >
         {isPlaying ? <Pause /> : <Play />}
       </button>
       <button
         onClick={onNext}
-        className="flex w-7 justify-center rounded-md text-[#8EE3EF] hover:outline hover:outline-2 hover:outline-offset-8 hover:outline-[#8EE3EF]"
+        className="text-orange-10 flex w-7 justify-center rounded-md text-accent-green hover:outline hover:outline-2 hover:outline-offset-8 hover:outline-orange-5"
       >
         <FastForward />
       </button>
       <button
         onClick={onShuffle}
-        className={`flex w-7 justify-center rounded-md hover:outline hover:outline-2 hover:outline-offset-8 hover:outline-[#8EE3EF] ${
-          isShuffled ? "text-[#8EE3EF]" : "text-gray-400"
+        className={`text-orange-10 flex w-7 justify-center rounded-md hover:outline hover:outline-2 hover:outline-offset-8 hover:outline-orange-5 ${
+          isShuffled ? "text-orange-10" : "text-[#1f0f00]"
         }`}
       >
         <Shuffle />

@@ -3,11 +3,16 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      'black': '#25291C',
-      'white': '#EFF7FF',
-      'accent-yellow': '#FDCA40',
-      'accent-blue': '#52489C',
-      'accent-green': '#4FB477',
+      'orange-1': '#643100',
+      'orange-2': '#633508',
+      'orange-3': '#7F3E00',
+      'orange-4': '#914600',
+      'orange-5': '#AF5500',
+      'orange-6': '#B96619',
+      'orange-7': '#C27731',
+      'orange-8': '#CB8849',
+      'orange-9': '#D49961',
+      'orange-10': '#EACAAE',
     },
     fontFamily: {
       comfortaa: ['Comfortaa'],

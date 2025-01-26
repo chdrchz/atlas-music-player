@@ -18,17 +18,17 @@ export default function PlayListItem({
 }: PlaylistItem) {
   return (
     <div
-      className={`p-1 flex w-full cursor-pointer flex-col rounded-lg ${
+      className={`hover:outline hover:outline-2 hover:outline-offset-8 hover:outline-orange-5 p-1 flex w-full cursor-pointer flex-col rounded-lg ${
         isSelected
-          ? "cursor-pointer shadow-lg backdrop-brightness-125"
+          ? "cursor-pointer shadow-lg backdrop-brightness-150"
           : ""
       }`}
       onClick={onClick}
     >
-      <p className="font-comfortaa ml-2 mr-2 font-bold text-[#FCEFF9]">{title}</p>
+      <p className="font-comfortaa ml-2 mr-2 font-bold text-orange-10">{title}</p>
       <div className="flex w-full justify-between">
-        <p className="font-montserrat ml-2 mr-2 text-[#FCEFF9]">{artist}</p>
-        <p className="font-montserrat ml-2 mr-2 text-[#FCEFF9]">
+        <p className="font-montserrat ml-2 mr-2 text-orange-10">{artist}</p>
+        <p className="font-montserrat ml-2 mr-2 text-orange-10">
           {formatDuration(duration)}
         </p>
       </div>
