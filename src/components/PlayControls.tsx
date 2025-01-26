@@ -9,7 +9,7 @@ interface PlayControlsProps {
   onShuffle?: () => void;
   speed: 0.5 | 1.0 | 2.0;
   onSpeedChange?: (speed: number) => void;
-  currentSong: string; // Changed from Track | null
+  currentSong: string;
   setCurrentSong: (track: Track) => void;
   playlist: Track[];
 }

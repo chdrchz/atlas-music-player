@@ -10,7 +10,7 @@ export default function VolumeControls({
   onVolumeChange,
 }: VolumeControlsProps) {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-4">
       <AudioLines className="text-[#8EE3EF]" />
       <input
         type="range"
