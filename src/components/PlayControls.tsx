@@ -20,23 +20,23 @@ export default function PlayControls({
   onSpeedChange,
 }: PlayControlsProps) {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between mr-3 ml-3">
       <button
         onClick={() => onSpeedChange?.(speed === 2 ? 0.5 : speed + 0.5)}
-        className="text-[#8EE3EF]"
+        className="text-[#8EE3EF] hover:outline hover:outline-2 hover:outline-[#8EE3EF] hover:outline-offset-8 rounded-md w-7 flex justify-center"
       >
         {speed}x
       </button>
-      <button onClick={onPrevious} className="text-[#8EE3EF]">
+      <button onClick={onPrevious} className="text-[#8EE3EF] hover:outline hover:outline-2 hover:outline-[#8EE3EF] hover:outline-offset-8 rounded-md w-7 flex justify-center">
         <Rewind />
       </button>
-      <button onClick={onPlayPause} className="text-[#8EE3EF]">
+      <button onClick={onPlayPause} className="text-[#8EE3EF] hover:outline hover:outline-2 hover:outline-[#8EE3EF] hover:outline-offset-8 rounded-md w-7 flex justify-center">
         {isPlaying ? <Pause /> : <Play />}
       </button>
-      <button onClick={onNext} className="text-[#8EE3EF]">
+      <button onClick={onNext} className="text-[#8EE3EF] hover:outline hover:outline-2 hover:outline-[#8EE3EF] hover:outline-offset-8 rounded-md w-7 flex justify-center">
         <FastForward />
       </button>
-      <button onClick={onShuffle} className="text-[#8EE3EF]">
+      <button onClick={onShuffle} className="text-[#8EE3EF] hover:outline hover:outline-2 hover:outline-[#8EE3EF] hover:outline-offset-8 rounded-md w-7 flex justify-center">
         <Shuffle />
       </button>
     </div>

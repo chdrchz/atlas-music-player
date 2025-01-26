@@ -23,7 +23,7 @@ export default function CurrentlyPlaying() {
   }
 
   return (
-    <div className="flex w-full flex-col gap-4 md:w-1/2">
+    <div className="flex w-full flex-col justify-between gap-4 rounded-lg bg-[#2d3547] p-4 drop-shadow-md md:w-1/2">
       <CoverArt cover={currentSong.cover} />
       <SongTitle song={currentSong} />
       <PlayControls
