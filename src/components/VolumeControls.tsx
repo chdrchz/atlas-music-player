@@ -10,17 +10,17 @@ export default function VolumeControls({
   onVolumeChange,
 }: VolumeControlsProps) {
   return (
-    <div className="flex items-center gap-4 rounded-lg p-6 bg-orange-2 drop-shadow-md shadow-lg">
-      <AudioLines className="text-[#EACAAE]" />
+    <div className="flex items-center gap-4 rounded-lg bg-surface p-6 shadow-lg drop-shadow-md">
+      <AudioLines className="text-secondary" />
       <input
         type="range"
         min="0"
         max="100"
         value={volume}
         onChange={(e) => onVolumeChange(parseInt(e.target.value))}
-        className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-[#EACAAE] accent-[#EACAAE]"
+        className="h-2 w-full cursor-pointer appearance-none rounded-lg accent-primary"
         style={{
-          background: `linear-gradient(to right, #EACAAE ${volume}%, #1f0f00 ${volume}%)`,
+          background: `linear-gradient(to right, rgb(99, 102, 241) ${volume}%, rgb(15, 23, 42) ${volume}%)`,
         }}
       />
     </div>

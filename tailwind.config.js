@@ -3,16 +3,14 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      'orange-1': '#643100',
-      'orange-2': '#633508',
-      'orange-3': '#7F3E00',
-      'orange-4': '#914600',
-      'orange-5': '#AF5500',
-      'orange-6': '#B96619',
-      'orange-7': '#C27731',
-      'orange-8': '#CB8849',
-      'orange-9': '#D49961',
-      'orange-10': '#EACAAE',
+    primary: '#6366F1',     // Indigo for main brand/actions
+    secondary: '#22D3EE',   // Cyan for accents
+    background: '#0F172A',  // Dark slate for main background
+    surface: '#1E293B',     // Lighter slate for cards/components
+    text: '#F8FAFC',        // Off-white for primary text
+    textMuted: '#94A3B8',   // Slate for secondary text
+    success: '#34D399',     // Emerald for positive states
+    error: '#FB7185',       
     },
     fontFamily: {
       comfortaa: ['Comfortaa'],

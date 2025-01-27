@@ -5,7 +5,7 @@ import { CurrentSongProvider } from './CurrentSongContext';
 
 function App() {
   return (
-    <div className="flex sm:h-full md:h-screen flex-col items-center justify-around bg-orange-1">
+    <div className="flex sm:h-full md:h-screen flex-col items-center justify-around bg-background">
       <div className="w-full">
       <CurrentSongProvider>
         <MusicPlayer />

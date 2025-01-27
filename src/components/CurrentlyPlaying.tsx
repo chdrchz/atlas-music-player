@@ -36,7 +36,7 @@ export default function CurrentlyPlaying() {
 
   return (
     <div className="flex w-full flex-col justify-start gap-4 md:w-1/2">
-      <div className="flex flex-col gap-6 rounded-lg p-6 bg-orange-2 shadow-lg drop-shadow-md">
+      <div className="flex flex-col gap-6 rounded-lg p-6 bg-surface shadow-lg drop-shadow-md">
         <CoverArt cover={currentSong.cover} />
         <SongTitle song={currentSong} />
       </div>
